@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#inclusion" class="md-skip">
           Skip to content
         </a>
       
@@ -414,6 +414,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#share-your-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Share your experience
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -455,23 +474,213 @@
   
 
 
-<h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
-<p><em>File</em>: <code>community-tips/inclusion.md</code></p>
-<p><em>UndefinedError</em>: 'data' is undefined</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mkdocs_macros/plugin.py&quot;, line 703, in render
-    return md_template.render(**page_variables)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/jinja2/environment.py&quot;, line 1295, in render
-    self.environment.handle_exception()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File &quot;/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/jinja2/environment.py&quot;, line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File &quot;&lt;template&gt;&quot;, line 7, in top-level template code
-  File &quot;/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/jinja2/environment.py&quot;, line 490, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: &#39;data&#39; is undefined
-</code></pre></div>
+<h1 id="inclusion">🤝 Inclusion</h1>
+<p>This page is part of our Top Tips campaign — a space to share quick advice, useful experiences, and things you wish someone had told you earlier.</p>
+<p>This topic is <strong>Inclusive Practice &amp; Community Care</strong>. Small things that help people feel included, supported, and able to participate.</p>
+<div class="sticky-board">
+
+
+
+</div>
+
+<hr />
+<h2 id="share-your-experience">✨ Share your experience</h2>
+<div class="submit-box">
+
+  <p class="submit-description">
+    Share a tip, lesson learned, or useful advice with the community.
+  </p>
+
+  <p class="submit-helper">
+  After clicking <strong>Submit</strong>, a GitHub issue will open
+  with your tip pre-filled. Simply click <strong>Create issue</strong>
+  to send it to the CAKE team for review before it goes live.
+</p>
+
+  <input
+    class="tip-input"
+    id="tip-title"
+    placeholder="Tip title"
+  />
+
+  <textarea
+    class="tip-textarea"
+    id="tip-text"
+    placeholder="Your advice..."
+  ></textarea>
+
+  <div class="tip-controls">
+
+
+<div class="emoji-picker">
+  <p class="emoji-label">
+    Select an emoji!
+  </p>
+
+  <div class="emoji-grid" id="tip-emoji">
+
+    <button type="button" class="emoji-btn active">🤝</button>
+    <button type="button" class="emoji-btn">💡</button>
+    <button type="button" class="emoji-btn">📝</button>
+    <button type="button" class="emoji-btn">🚀</button>
+    <button type="button" class="emoji-btn">🎯</button>
+    <button type="button" class="emoji-btn">🌟</button>
+    <button type="button" class="emoji-btn">📚</button>
+    <button type="button" class="emoji-btn">🧠</button>
+    <button type="button" class="emoji-btn">✨</button>
+    <button type="button" class="emoji-btn">🎨</button>
+    <button type="button" class="emoji-btn">💬</button>
+    <button type="button" class="emoji-btn">🔍</button>
+    <button type="button" class="emoji-btn">📌</button>
+    <button type="button" class="emoji-btn">🛠️</button>
+    <button type="button" class="emoji-btn">🔥</button>
+    <button type="button" class="emoji-btn">📖</button>
+    <button type="button" class="emoji-btn">📱</button>
+    <button type="button" class="emoji-btn">🙌</button>
+  </div>
+</div>
+
+<div class="colour-picker">
+
+  <p class="emoji-label">
+    Select your sticky note colour!
+  </p>
+
+  <div class="colour-grid" id="tip-colour">
+
+    <button
+      type="button"
+      class="colour-btn yellow active"
+      data-colour="yellow">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn blue"
+      data-colour="blue">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn green"
+      data-colour="green">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn pink"
+      data-colour="pink">
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="submit-button-row">
+
+  <button
+    class="tip-submit-btn"
+    onclick="submitTip('inclusion')">
+
+    Submit
+
+  </button>
+
+</div>
+
+
+
+</div>
+
+<div class="admonition question">
+<p class="admonition-title">Contributing:</p>
+<p>Read our <a href="../../how-to-contribute/">How to contribute</a> guide for more.</p>
+<p>Please also familiarise yourself with our <a href="../../code-of-conduct/">Code of Conduct</a>. </p>
+<ul>
+<li>Use welcoming and inclusive language</li>
+<li>Be respectful of different viewpoints and experiences</li>
+<li>Gracefully accept constructive criticism</li>
+<li>Focus on what is best for the community</li>
+<li>Show courtesy and respect towards others</li>
+</ul>
+</div>
+<script>
+
+document.querySelectorAll(".emoji-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".emoji-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+  });
+
+});
+
+</script>
+
+<script>
+
+document.querySelectorAll(".colour-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".colour-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+  });
+
+});
+
+</script>
+
+<script>
+function submitTip(theme) {
+
+  const title =
+    document.getElementById("tip-title").value.trim();
+
+  const text =
+    document.getElementById("tip-text").value.trim();
+
+  const emoji =
+    document.querySelector(".emoji-btn.active").textContent;
+
+  const color =
+    document
+    .querySelector(".colour-btn.active")
+    .dataset.colour;
+
+  if (!title || !text) {
+    alert("Please fill in both title and text.");
+    return;
+  }
+
+  const issueTitle =
+    `[Tip:${theme}] ${title}`;
+
+  const issueBody =
+`theme: ${theme}
+title: ${title}
+emoji: ${emoji}
+color: ${color}
+text: ${text}`;
+
+  const url =
+    "https://github.com/mzhc13/CAKEbox/issues/new"
+    + "?labels=tip-submission," + theme
+    + "&title=" + encodeURIComponent(issueTitle)
+    + "&body=" + encodeURIComponent(issueBody);
+
+  window.open(url, "_blank");
+}
+</script>
 
 
 
