@@ -459,41 +459,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#about_1" class="md-nav__link">
+  <a href="#share-your-experience" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        ✨ Share your experience
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="About">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For example:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-advice-guidance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips, advice, guidance:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -523,7 +495,7 @@
       
       
       
-        <a href="../#tag:top-tips" class="md-tag">Top Tips</a>
+        <a href="../../all/#tag:top-tips" class="md-tag">Top Tips</a>
       
     
   </nav>
@@ -550,20 +522,8 @@
   <ul>
     
       <li>
-        <a href="../../themes/collaboration/">
+        <a href="../collaboration/">
           Collaboration
-        </a>
-      </li>
-    
-      <li>
-        <a href="../collaborations/">
-          Collaboration & Working Together
-        </a>
-      </li>
-    
-      <li>
-        <a href="../../themes/community/">
-          Community
         </a>
       </li>
     
@@ -574,32 +534,20 @@
       </li>
     
       <li>
-        <a href="../../themes/events/">
+        <a href="../events/">
           Events
         </a>
       </li>
     
       <li>
-        <a href="../../themes/facilitation/">
+        <a href="../facilitation/">
           Facilitation
         </a>
       </li>
     
       <li>
-        <a href="../../themes/inclusion/">
-          Inclusion
-        </a>
-      </li>
-    
-      <li>
-        <a href="../inclusive-practice/">
+        <a href="../inclusion/">
           Inclusive Practice & Community Care
-        </a>
-      </li>
-    
-      <li>
-        <a href="../events/">
-          Preparing for Conferences, Events, Talks
         </a>
       </li>
     
@@ -626,25 +574,211 @@
 </div>
 <hr />
 <h1 id="template">Template</h1>
-<h2 id="about_1">About</h2>
 <p>This page is part of our Top Tips campaign — a space to share quick advice, useful experiences, and things you wish someone had told you earlier.</p>
-<p>This topic is <strong>[Theme title]</strong>. <em>Add a short description of the theme here. What kind of tips does it cover? Why does it matter?</em></p>
-<h3 id="for-example">For example:</h3>
-<ul>
-<li>Examples of what come under this theme</li>
-</ul>
-<h3 id="tips-advice-guidance">Tips, advice, guidance:</h3>
-<!-- Place your contributions here! -->
+<div class="sticky-board">
 
-<ul>
-<li>Tip #1</li>
-</ul>
-<p></br></p>
+
+
+</div>
+
+<hr />
+<h2 id="share-your-experience">✨ Share your experience</h2>
+<div class="submit-box">
+
+  <p class="submit-description">
+    Share a tip, lesson learned, or useful advice with the community.
+  </p>
+
+  <p class="submit-helper">
+  After clicking <strong>Submit</strong>, a GitHub issue will open
+  with your tip pre-filled. Simply click <strong>Create issue</strong>
+  to send it to the CAKE team for review before it goes live.
+</p>
+
+  <input
+    class="tip-input"
+    id="tip-title"
+    placeholder="Tip title"
+  />
+
+  <textarea
+    class="tip-textarea"
+    id="tip-text"
+    placeholder="Your advice..."
+  ></textarea>
+
+  <div class="tip-controls">
+
+
+<div class="emoji-picker">
+  <p class="emoji-label">
+    Select an emoji!
+  </p>
+
+  <div class="emoji-grid" id="tip-emoji">
+
+    <button type="button" class="emoji-btn active">🤝</button>
+    <button type="button" class="emoji-btn">💡</button>
+    <button type="button" class="emoji-btn">📝</button>
+    <button type="button" class="emoji-btn">🚀</button>
+    <button type="button" class="emoji-btn">🎯</button>
+    <button type="button" class="emoji-btn">🌟</button>
+    <button type="button" class="emoji-btn">📚</button>
+    <button type="button" class="emoji-btn">🧠</button>
+    <button type="button" class="emoji-btn">✨</button>
+    <button type="button" class="emoji-btn">🎨</button>
+    <button type="button" class="emoji-btn">💬</button>
+    <button type="button" class="emoji-btn">🔍</button>
+    <button type="button" class="emoji-btn">📌</button>
+    <button type="button" class="emoji-btn">🛠️</button>
+    <button type="button" class="emoji-btn">🔥</button>
+    <button type="button" class="emoji-btn">📖</button>
+    <button type="button" class="emoji-btn">📱</button>
+    <button type="button" class="emoji-btn">🙌</button>
+  </div>
+</div>
+
+<div class="colour-picker">
+
+  <p class="emoji-label">
+    Select your sticky note colour!
+  </p>
+
+  <div class="colour-grid" id="tip-colour">
+
+    <button
+      type="button"
+      class="colour-btn yellow active"
+      data-colour="yellow">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn blue"
+      data-colour="blue">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn green"
+      data-colour="green">
+    </button>
+
+    <button
+      type="button"
+      class="colour-btn pink"
+      data-colour="pink">
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="submit-button-row">
+
+  <button
+    class="tip-submit-btn"
+    onclick="submitTip('Inclusion')">
+
+    Submit
+
+  </button>
+
+</div>
+
+
+
+</div>
+
 <div class="admonition question">
 <p class="admonition-title">Contributing:</p>
-<p>Click the little page icon at the top of the page to edit it. You’ll be taken to GitHub, where you can add your thoughts and send them over for review in just a few clicks.</p>
 <p>Read our <a href="../../how-to-contribute/">How to contribute</a> guide for more.</p>
+<p>Please also familiarise yourself with our <a href="../../code-of-conduct/">Code of Conduct</a>. </p>
+<ul>
+<li>Use welcoming and inclusive language</li>
+<li>Be respectful of different viewpoints and experiences</li>
+<li>Gracefully accept constructive criticism</li>
+<li>Focus on what is best for the community</li>
+<li>Show courtesy and respect towards others</li>
+</ul>
 </div>
+<script>
+
+document.querySelectorAll(".emoji-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".emoji-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+  });
+
+});
+
+</script>
+
+<script>
+
+document.querySelectorAll(".colour-btn").forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".colour-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+  });
+
+});
+
+</script>
+
+<script>
+function submitTip(theme) {
+
+  const title =
+    document.getElementById("tip-title").value.trim();
+
+  const text =
+    document.getElementById("tip-text").value.trim();
+
+  const emoji =
+    document.querySelector(".emoji-btn.active").textContent;
+
+  const color =
+    document
+    .querySelector(".colour-btn.active")
+    .dataset.colour;
+
+  if (!title || !text) {
+    alert("Please fill in both title and text.");
+    return;
+  }
+
+  const issueTitle =
+    `[Tip:${theme}] ${title}`;
+
+  const issueBody =
+`theme: ${theme}
+title: ${title}
+emoji: ${emoji}
+color: ${color}
+text: ${text}`;
+
+  const url =
+    "https://github.com/mzhc13/CAKEbox/issues/new"
+    + "?labels=tip-submission," + theme
+    + "&title=" + encodeURIComponent(issueTitle)
+    + "&body=" + encodeURIComponent(issueBody);
+
+  window.open(url, "_blank");
+}
+</script>
 
 
 
