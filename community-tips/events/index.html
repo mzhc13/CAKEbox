@@ -482,7 +482,7 @@
       
       
       
-        <a href="../../how-to-contribute/contribution-template/#tag:events" class="md-tag">Events</a>
+        <a href="../../all/#tag:events" class="md-tag">Events</a>
       
     
       
@@ -508,18 +508,6 @@
 <p>This theme is about <strong>preparing for conferences, events, talks</strong>. Whether you’re preparing to attend, organising, or speaking, share anything that helped (or would have helped) you.</p>
 <p>Add your sprinkles of knowledge below: a quick tip, small insight, or lesson learned.</p>
 <div class="sticky-board">
-
-
-
-<div class="sticky-note yellow">
-  <div class="note-title">
-    🤝 Test1
-  </div>
-
-  <div class="note-text">
-    TEST
-  </div>
-</div>
 
 
 
@@ -722,6 +710,15 @@ document.querySelectorAll(".colour-btn").forEach(btn => {
 </script>
 
 <script>
+
+
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+}
+
 function submitTip(theme) {
 
   const title =
@@ -743,24 +740,29 @@ function submitTip(theme) {
     return;
   }
 
-  const issueTitle =
-    `[Tip:${theme}] ${title}`;
+  const yaml =
+`title: "${title}"
+text: "${text}"
+emoji: "${emoji}"
+color: "${color}"
+`;
 
-  const issueBody =
-`theme: ${theme}
-title: ${title}
-emoji: ${emoji}
-color: ${color}
-text: ${text}`;
+  const slug = slugify(title);
+
+  const filename =
+    `data/tips/${theme}/${slug}.yml`;
+
+  const repo =
+    "mzhc13/CAKEbox";
 
   const url =
-    "https://github.com/mzhc13/CAKEbox/issues/new"
-    + "?labels=tip-submission," + theme
-    + "&title=" + encodeURIComponent(issueTitle)
-    + "&body=" + encodeURIComponent(issueBody);
+    `https://github.com/${repo}/new/main`
+    + `?filename=${encodeURIComponent(filename)}`
+    + `&value=${encodeURIComponent(yaml)}`;
 
   window.open(url, "_blank");
 }
+
 </script>
 
 
